@@ -1,0 +1,41 @@
+@use "../helpers/mixins" as *;
+
+/* Start Grid System */
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+@include breakpoints(small) {
+  .container {
+    width: 750px;
+  }
+}
+@include breakpoints(medium) {
+  .container {
+    width: 970px;
+  }
+}
+@include breakpoints(large) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Grid System */
+
+/* Start Components */
+
+@media (max-width: 991px) {
+  .text-center-xs {
+    text-align: center;
+  }
+}
+
+/* End Components */

@@ -1,0 +1,45 @@
+@use "../helpers/variables" as *;
+
+/* Start Main Components */
+.main-button {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  background-color: $redColor;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.the-toggler {
+  background-color: $redColor;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  margin: 0 10px;
+  cursor: pointer;
+  display: none;
+  transition: 0.5s;
+  position: relative;
+  @media (max-width: 991px) {
+    display: block;
+  }
+  span {
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #fff;
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+/* End Main Components */

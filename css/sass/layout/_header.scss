@@ -1,0 +1,63 @@
+@use "../helpers/variables" as *;
+
+/* Start Header */
+.header {
+  padding: 20px 0;
+  border-bottom: 1px solid #d9d9d9;
+  .content {
+    display: flex;
+    flex-direction: $flex-row;
+    align-items: center;
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .logo {
+    width: 30%;
+    h1 {
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+    p {
+      color: $greyColor;
+      width: 200px;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    width: 70%;
+    background-color: $redColor;
+    border-radius: 15px;
+    flex-direction: $flex-row;
+    text-transform: uppercase;
+    transition: 0.5s;
+    @media (max-width: 991px) {
+      width: 100%;
+      display: none;
+      &.open {
+        display: block;
+      }
+    }
+
+    li {
+      width: 100%;
+      font-size: 16px;
+      text-align: center;
+      a {
+        display: block;
+        padding: 20px 10px;
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+          color: #ddd;
+        }
+      }
+    }
+  }
+}
+
+/* End Header */
